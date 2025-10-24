@@ -1,5 +1,5 @@
 # AXIS
-Automated crystal identification system developed in EMBL Grenoble Marquez group by Aurélien Personnaz.
+Automated crystal identification system developed at EMBL Grenoble Marquez group by Aurélien Personnaz.
 
 ## Installation
 Create a python virtual environment and install the dependencies.
