@@ -10,8 +10,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Install correct pytorch version for your environment from [there](https://pytorch.org/get-started/locally/)
-
 The models are pulled and stored in the [HuggingFace repository](https://huggingface.co/)
 
 You will need to sign up and get a write token.

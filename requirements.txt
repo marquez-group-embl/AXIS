@@ -1,4 +1,6 @@
 evaluate
+torch
+torchvision
 numpy
 wandb
 datasets
