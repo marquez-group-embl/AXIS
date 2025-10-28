@@ -30,7 +30,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--huggingface_token', dest='huggingface_token', type=str,
                     default=os.getenv("HUGGINGFACE_TOKEN"))
 parser.add_argument('--model_checkpoint', dest='model_checkpoint', type=str,
-                    default="apersonnaz/AXIS-foundation")
+                    default="Marquez-Group-EMBL/AXIS-foundation")
 parser.add_argument('--n_epoch', dest='n_epoch', type=int, default=15)
 parser.add_argument('--batch_size', dest='batch_size', type=int, default=10)
 parser.add_argument('--lr', dest='lr', type=float, default=5e-6)
