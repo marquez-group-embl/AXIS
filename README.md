@@ -6,7 +6,7 @@ Automated crystal identification system developed at EMBL Grenoble Marquez group
 ![AXIS Overview](images/overview.png)
 
 ## Presentation
-AXIS proposes a simple procedure to train a crystal identification system on any Crystallography infrastructure images. The system provided will return the probability of crystalline signs (large crystals, needles, micro-crystals, etc.) in an given drop micrograph. It was fully integrated into [EMBL Grenoble Crystallographic Image Management System (CRIMS)](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/), but can be easily replicated in another infrastructure with the following steps:
+AXIS proposes a simple procedure to train a crystal identification system on any Crystallography infrastructure images. The system provided will return the presence probability of any crystalline signs (large crystals, needles, micro-crystals, etc.) in an given drop micrograph. It was fully integrated into [EMBL Grenoble Crystallographic Image Management System (CRIMS)](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/), but can be easily replicated in another infrastructure with the following steps:
 
 - An initial labelled dataset must be assembled with local images labelled as *crystal* or *other*. A data extraction from the local LIMS with trustable user scores might be the simplest way. As an example, EMBL grenoble HTX team initial dataset can be downloaded [there](https://doi.org/10.5281/zenodo.17279591). 
 - Part of it should be kept as a test set.
