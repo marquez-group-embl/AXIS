@@ -13,8 +13,8 @@ AXIS proposes a simple procedure to train a crystal identification system on any
 - Those initial and test datasets should be used to fine tune the [AXIS foundation](https://huggingface.co/Marquez-Group-EMBL/AXIS-foundation) model using the ``training.py`` script (see below).  
 - The model should be integrated in the local LIMS to provide predictions for all new images produced by the infrastructure.
 - All images with matching predictions and LIMS user score can be directly used to extend the training dataset. For the contradicting ones, a basic curation system must be used (ideally integrated into the local LIMS) by experts to determine the final label and add them to the new training set.
-- The extended training set should be used with the test set to fine tune again the Axis foundation modele.
-- The resulting model should be used to replace the previous one in the local LIMS
+- The extended training set should be used with the test set to fine tune again the Axis foundation model.
+- The resulting model should replace the previous one in the local LIMS
 - Multiple training iterations can be done to improve the system efficiency.
 
 You can find more details and information about the use of UV light images in the  [paper](https://doi.org/10.1101/2025.11.03.685844).
