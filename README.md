@@ -6,16 +6,18 @@ Automated crystal identification system developed at EMBL Grenoble Marquez group
 ![AXIS Overview](images/overview.png)
 
 ## Presentation
-AXIS proposes a simple procedure to train a crystal identification system on any Crystallography infrastructure images. The system provided will return the probability of crystalline signs (large crystals, needles, micro-crystals, etc.) in an given drop micrograph. It was fully integrated into EMBL Grenoble Crystallographic Image Management System (CRIMS), but can be easily replicated in another infrastructure by following these steps:
+AXIS proposes a simple procedure to train a crystal identification system on any Crystallography infrastructure images. The system provided will return the probability of crystalline signs (large crystals, needles, micro-crystals, etc.) in an given drop micrograph. It was fully integrated into [EMBL Grenoble Crystallographic Image Management System (CRIMS)](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/), but can be easily replicated in another infrastructure with the following steps:
 
-- An initial labelled dataset must be assembled with local images labelled as *crystal* or *other*. A data extraction from the local LIMS is probably the simplest way. As an example, EMBL grenoble HTX team initial dataset can be downloaded [there](https://doi.org/10.5281/zenodo.17279591). 
+- An initial labelled dataset must be assembled with local images labelled as *crystal* or *other*. A data extraction from the local LIMS with trustable user scores might be the simplest way. As an example, EMBL grenoble HTX team initial dataset can be downloaded [there](https://doi.org/10.5281/zenodo.17279591). 
 - Part of it should be kept as a test set.
-- Those initial and test datasets should be used to fine tune the [AXIS foundation](https://huggingface.co/Marquez-Group-EMBL/AXIS-foundation) model using the training.py script (see below).  
+- Those initial and test datasets should be used to fine tune the [AXIS foundation](https://huggingface.co/Marquez-Group-EMBL/AXIS-foundation) model using the ``training.py`` script (see below).  
 - The model should be integrated in the local LIMS to provide predictions for all new images produced by the infrastructure.
-- All images where the system predictions and the LIMS user score match can be used to extend the training dataset, for those where they contradict, a curation system must be used (ideally integrated into the local LIMS) by experts to determine the final label and add them to the new training set.
-- A new model can then be trained on the test and extended datasets and replace the previous one.
+- All images with matching predictions and LIMS user score can be directly used to extend the training dataset. For the others, a basic curation system must be used (ideally integrated into the local LIMS) by experts to determine the final label and add them to the new training set.
+- The extended training set should be used with the test set to fine tune again the Axis foundation modele.
+- The resulting model should be used to replace the previous one in the local LIMS
+- Multiple training iterations can be done to improve the system efficiency.
 
-For more details and informations on the use of UV light images, please read the [paper](https://doi.org/10.1101/2025.11.03.685844).
+You can find more details and information about the use of UV light images in the  [paper](https://doi.org/10.1101/2025.11.03.685844).
 
 
 ## Installation
